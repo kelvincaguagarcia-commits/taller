@@ -5,5 +5,5 @@ def transferir(cuentas, origen, destino, monto):
     if origen not in cuentas or destino not in cuentas: raise ValueError("Cuenta inexistente") 
     if cuentas[origen] < monto: raise ValueError("Saldo insuficiente") 
     cuentas[origen] -= monto 
-    cuentas[destino] += monto 
+    cuentas[destino] -= monto
     return True 
